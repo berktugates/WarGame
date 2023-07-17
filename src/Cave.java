@@ -7,8 +7,5 @@ public class Cave extends BattleLoc{
         System.out.println("Cave kısmındasın!");
         return true;
     }
-    @Override
-    public void combat(){
 
-    }
 }

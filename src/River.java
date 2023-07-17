@@ -7,8 +7,5 @@ public class River extends BattleLoc{
         System.out.println("River kısmındasın");
         return true;
     }
-    @Override
-    public void combat(){
 
-    }
 }

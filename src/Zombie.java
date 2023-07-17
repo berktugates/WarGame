@@ -8,7 +8,7 @@ public class Zombie extends Obstacle{
     @Override
     public int obstacleNumber() {
         Random r = new Random();
-        int obstacleNumber = r.nextInt(3);
+        int obstacleNumber = r.nextInt(1,3);
         return obstacleNumber;
     }
 }

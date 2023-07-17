@@ -45,7 +45,7 @@ public class Player {
         this.setHealth(gameChar.getHealth());
         this.setMoney(gameChar.getMoney());
 
-        System.out.println("Character Name: " + getName() +
+        System.out.println(" Character Name: " + getName() +
                 "\n Character Damage: " + getDamage() +
                 "\n Character Health: " + getHealth() +
                 "\n Character Money: " + getMoney());

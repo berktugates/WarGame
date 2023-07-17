@@ -60,14 +60,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
                 case 2:
                     if(this.player.getMoney() >= 25 && this.mediumArmor == 0){
@@ -80,14 +73,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
                 case 3:
                     if(this.player.getMoney() >= 40 && this.heavyArmor == 0){
@@ -100,14 +86,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
 
                 case 4:
@@ -121,14 +100,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
                 case 5:
                     if(this.player.getMoney() >= 35 && this.sword == 0){
@@ -141,14 +113,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
 
                 case 6:
@@ -161,14 +126,7 @@ public class ToolStore extends NormalLoc{
                         }
                     }
                     System.out.println("-------- Owned --------");
-                    System.out.println(
-                            "Light Armor:" + this.lightArmor + "\n" +
-                                    "Medium Armor: " + this.mediumArmor + "\n" +
-                                    "Heavy Armor: " + this.heavyArmor + "\n" +
-                                    "Gun: " + this.gun + "\n" +
-                                    "Sword: " + this.sword + "\n" +
-                                    "Rifle: " + this.rifle + "\n"
-                    );
+                    equipmentsInfo();
                     break;
 
                 case 7:
@@ -182,4 +140,62 @@ public class ToolStore extends NormalLoc{
         }
     }
 
+    public void equipmentsInfo(){
+        System.out.println(
+                "Light Armor:" + this.lightArmor + "\n" +
+                        "Medium Armor: " + this.mediumArmor + "\n" +
+                        "Heavy Armor: " + this.heavyArmor + "\n" +
+                        "Gun: " + this.gun + "\n" +
+                        "Sword: " + this.sword + "\n" +
+                        "Rifle: " + this.rifle + "\n"
+        );
+    }
+
+    public int getLightArmor() {
+        return lightArmor;
+    }
+
+    public void setLightArmor(int lightArmor) {
+        this.lightArmor = lightArmor;
+    }
+
+    public int getMediumArmor() {
+        return mediumArmor;
+    }
+
+    public void setMediumArmor(int mediumArmor) {
+        this.mediumArmor = mediumArmor;
+    }
+
+    public int getHeavyArmor() {
+        return heavyArmor;
+    }
+
+    public void setHeavyArmor(int heavyArmor) {
+        this.heavyArmor = heavyArmor;
+    }
+
+    public int getGun() {
+        return gun;
+    }
+
+    public void setGun(int gun) {
+        this.gun = gun;
+    }
+
+    public int getSword() {
+        return sword;
+    }
+
+    public void setSword(int sword) {
+        this.sword = sword;
+    }
+
+    public int getRifle() {
+        return rifle;
+    }
+
+    public void setRifle(int rifle) {
+        this.rifle = rifle;
+    }
 }

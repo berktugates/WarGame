@@ -5,5 +5,4 @@ public abstract class BattleLoc extends Location{
     }
     @Override
     public abstract boolean onLocation();
-    public abstract void combat();
 }
