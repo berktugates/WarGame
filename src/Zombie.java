@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Zombie extends Obstacle{
-    public Zombie(String id, int damage, int health, int cost){
+    public Zombie(){
         super("1",3,10,4);
     }
 

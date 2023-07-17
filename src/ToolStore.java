@@ -125,6 +125,7 @@ public class ToolStore extends NormalLoc{
                     if(this.player.getMoney() >= 45 && this.rifle == 0){
                         System.out.println("Rifle weapon token!");
                         this.rifle = 1;
+                        this.player.setMoney(this.player.getMoney() - 45);
                         System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.gun != 0 || this.sword != 0){
                             this.gun = 0;

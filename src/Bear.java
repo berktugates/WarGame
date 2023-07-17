@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Bear extends Obstacle{
-    public Bear(String id, int damage, int health, int cost){
+    public Bear(){
         super("Bear",7,20,12);
     }
 

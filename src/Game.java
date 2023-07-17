@@ -10,7 +10,8 @@ public class Game {
         p1.selectChar();
 
         Location location = null;
-        while(true){
+        boolean isDead = false;
+        while(!isDead){
             System.out.println("--------------- Locations ---------------");
             System.out.println("1) Safe House\n2) Tool Store\n3) Forest\n4) Cave\n5) River");
             System.out.print("Please choose where you want to go: ");
@@ -37,12 +38,14 @@ public class Game {
                     location = new SafeHouse(p1);
                     break;
             }
-            //location.onLocation();
 
-            if(!location.onLocation()){
-                System.out.println("GAME OVER");
-            }
+             if(!location.onLocation()){
+                 System.out.println("GAME OVER " + p1.getName() + " character is dead");
+                 isDead = true;
+             }
+
         }
 
     }
+
 }

@@ -1,11 +1,12 @@
 public class Forest extends BattleLoc{
+    private int wood;
     public Forest(Player player){
         super(player,"Forest");
     }
     @Override
     public boolean onLocation(){
         Vampire vampires = new Vampire();
-        System.out.println("Welcome to Forest! Beware of vampires!");
+        System.out.println("Welcome to Forest! Watch ot for vampires!");
         int count = vampires.obstacleNumber();
         System.out.println("Vampire count: " + count);
 
@@ -21,6 +22,7 @@ public class Forest extends BattleLoc{
 
         // Match
         ToolStore t = new ToolStore(this.player);
+        int prize = 0;
         for(int i = 1; i<= count; i++){
             vampiresHealth = vampires.getHealth();
             while(playerHealth > 0 && vampiresHealth > 0){
@@ -46,6 +48,7 @@ public class Forest extends BattleLoc{
                 if(vampiresHealth == 0){
                     System.out.println("Congratulations, you killed the vampire!");
                     player.setMoney(player.getMoney() + 7);
+                    prize++;
                     System.out.println("Player's money: " + player.getMoney());
                     System.out.println("----------------------------------------");
                     break;
@@ -68,16 +71,26 @@ public class Forest extends BattleLoc{
                 }
                 System.out.println("Player's Health: " + playerHealth + "\nVampire's Health: " + vampiresHealth);
 
-                if(player.getHealth() <= 0){
-                    System.out.println("GAME OVER" + player.getName() + "character is dead");
+                if(playerHealth <= 0){
                     return false;
                 }
             }
+        }
 
-
+        if(prize == count){
+            System.out.println("Congratulations! You killed all the vampires in the Forest!");
+            this.wood += 1;
+            System.out.println("The item you earn is water: " + this.wood);
         }
         return true;
     }
 
+    public int getWood(){
+        return this.wood;
+    }
+
+    public void setWood(int wood){
+        this.wood = wood;
+    }
 }
 
