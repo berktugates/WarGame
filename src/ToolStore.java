@@ -54,6 +54,7 @@ public class ToolStore extends NormalLoc{
                         System.out.println("Light armor taken!");
                         this.lightArmor = 1;
                         this.player.setMoney(this.player.getMoney()-15);
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.mediumArmor != 0 || this.heavyArmor != 0){
                             this.mediumArmor = 0;
                             this.heavyArmor = 0;
@@ -67,6 +68,7 @@ public class ToolStore extends NormalLoc{
                         System.out.println("Medium armor taken!");
                         this.mediumArmor = 1;
                         this.player.setMoney(this.player.getMoney()-25);
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.lightArmor != 0 || this.heavyArmor != 0){
                             this.lightArmor = 0;
                             this.heavyArmor = 0;
@@ -80,6 +82,7 @@ public class ToolStore extends NormalLoc{
                         System.out.println("Heavy armor taken!");
                         this.heavyArmor = 1;
                         this.player.setMoney(this.player.getMoney()-40);
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.lightArmor != 0 || this.mediumArmor != 0){
                             this.lightArmor = 0;
                             this.mediumArmor = 0;
@@ -94,6 +97,7 @@ public class ToolStore extends NormalLoc{
                         System.out.println("Gun weapon token!");
                         this.gun = 1;
                         this.player.setMoney(this.player.getMoney()-25);
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.sword != 0 || this.rifle != 0){
                             this.sword = 0;
                             this.rifle = 0;
@@ -107,12 +111,13 @@ public class ToolStore extends NormalLoc{
                         System.out.println("Sword weapon token!");
                         this.sword = 1;
                         this.player.setMoney(this.player.getMoney()-35);
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.gun != 0 || this.rifle != 0){
                             this.gun = 0;
                             this.rifle = 0;
                         }
                     }
-                    System.out.println("-------- Owned --------");
+                    System.out.println("\n\n-------- Owned --------");
                     equipmentsInfo();
                     break;
 
@@ -120,6 +125,7 @@ public class ToolStore extends NormalLoc{
                     if(this.player.getMoney() >= 45 && this.rifle == 0){
                         System.out.println("Rifle weapon token!");
                         this.rifle = 1;
+                        System.out.println("Remaining Money: " + this.player.getMoney());
                         if(this.gun != 0 || this.sword != 0){
                             this.gun = 0;
                             this.sword = 0;

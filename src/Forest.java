@@ -8,38 +8,76 @@ public class Forest extends BattleLoc{
         System.out.println("Welcome to Forest! Beware of vampires!");
         int count = vampires.obstacleNumber();
         System.out.println("Vampire count: " + count);
+
         // Vampires Attribute
         int vampiresDamage = vampires.getDamage();
-        vampiresDamage *= count;
         int vampiresHealth = vampires.getHealth();
-        vampiresHealth *= count;
         int vampiresCost = vampires.getCost();
-        vampiresCost *= count;
         //----------------
         // Player Attribute
         int playerDamage = player.getDamage();
         int playerHealth = player.getHealth();
-        int playerMoney = player.getMoney();
         //--------------
 
         // Match
-        while(playerHealth > 0 && vampiresHealth > 0){
-            ToolStore t = new ToolStore(this.player);
-            System.out.println(player.getName() + " attack!");
-            // Weapon olup olmadığını sor
-            vampiresHealth-= playerDamage;
-            System.out.println("Vampires attack!");
-            // Armor olup olmadığını sor
-            playerHealth -= vampiresDamage;
-            if(vampiresHealth <= 0){
-                System.out.println("Congratulations, you killed all the vampires!");
-                return true;
+        ToolStore t = new ToolStore(this.player);
+        for(int i = 1; i<= count; i++){
+            vampiresHealth = vampires.getHealth();
+            while(playerHealth > 0 && vampiresHealth > 0){
+                System.out.println("----------------------------------------------------------------------");
+                System.out.println(player.getName() + " attack!");
+                if(t.getGun() == 1){
+                    playerDamage += 2;
+                }
+                else if(t.getSword() == 1){
+                    playerDamage += 4;
+                }
+                else if(t.getRifle() == 1){
+                    playerDamage += 7;
+                }
+                vampiresHealth -= playerDamage;
+
+                if(vampiresHealth < 0){
+                    vampiresHealth = 0;
+                }
+                System.out.println("Player's Health: " + playerHealth + "\nVampire's Health: " + vampiresHealth);
+                System.out.println("----------------------------------------------------------------------");
+
+                if(vampiresHealth == 0){
+                    System.out.println("Congratulations, you killed the vampire!");
+                    player.setMoney(player.getMoney() + 7);
+                    System.out.println("Player's money: " + player.getMoney());
+                    System.out.println("----------------------------------------");
+                    break;
+                }
+
+                System.out.println("Vampire attack!");
+                if(t.getLightArmor() == 1){
+                    vampiresDamage -= 1;
+                }
+                else if(t.getMediumArmor() == 1){
+                    vampiresDamage -= 3;
+                }
+                else if(t.getHeavyArmor() == 1){
+                    vampiresDamage = 0;
+                }
+
+                playerHealth -= vampiresDamage;
+                if(playerHealth < 0){
+                    playerHealth = 0;
+                }
+                System.out.println("Player's Health: " + playerHealth + "\nVampire's Health: " + vampiresHealth);
+
+                if(player.getHealth() <= 0){
+                    System.out.println("GAME OVER" + player.getName() + "character is dead");
+                    return false;
+                }
             }
-            else if(player.getHealth() <= 0){
-                System.out.println("GAME OVER" + player.getName() + "character is dead");
-            }
+
+
         }
         return true;
     }
 
 }
+

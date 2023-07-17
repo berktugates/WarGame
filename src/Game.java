@@ -19,30 +19,25 @@ public class Game {
             switch (locChoose){
                 case 1:
                     location = new SafeHouse(p1);
-                    location.onLocation();
                     break;
                 case 2:
                     location = new ToolStore(p1);
-                    location.onLocation();
                     break;
 
                 case 3:
                     location = new Forest(p1);
-                    location.onLocation();
                     break;
                 case 4:
                     location = new Cave(p1);
-                    location.onLocation();
                     break;
                 case 5:
                     location = new River(p1);
-                    location.onLocation();
                     break;
                 default:
                     location = new SafeHouse(p1);
                     break;
             }
-            location.onLocation();
+            //location.onLocation();
 
             if(!location.onLocation()){
                 System.out.println("GAME OVER");
