@@ -45,7 +45,7 @@ An adventure game is designed in Java language in accordance with OOP principles
      * If the player chooses the Store, they can buy armor or weapons.
      * If the player chooses Jungle, he is fighting a random number of vampires. If he wins, he will receive money and wood as loot.
      * If the player chooses Cave, he is fighting a random number of zombies. If he wins, he will receive money and food as loot.
-     If the player chooses Nehir, they are fighting a random number of bears. If he wins, he will receive money and water as loot.
+     If the player chooses River, they are fighting a random number of bears. If he wins, he will receive money and water as loot.
 
      4- If the player's health is 0, the game is over.
      
